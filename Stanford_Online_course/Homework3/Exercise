@@ -1,0 +1,32 @@
+1. How many different minimum cuts are there in a tree with n nodes (ie. n−1 edges) ?
+   It is minimum cuts not cuts. Think about why there is n-1 edges
+
+2. Let "output" denote the cut output by Karger's min cut algorithm on a given connected graph with nn vertices, and let p=1(n2)p=1(n2). Which of the following statements are true?
+
+[Choices elided]
+
+Solution:
+
+We know that the probability of finding any fixed minimum cut is lower bounded pp, so these two options is automatically true.
+
+For every graph G with n nodes, there exists a min cut (A,B) such that
+Pr[out=(A,B)]≥pPr[out=(A,B)]≥p
+
+For every graph G with n nodes and every min cut (A,B) of G,
+Pr[out=(A,B)]≥pPr[out=(A,B)]≥p
+
+What is non-trivial is that whether or not there exists a graph and a min-cut such that the probability of finding it is at most pp. This is possible, for example, a graph with only two nodes and one edge, the probability of finding the min cut is 1 and that is also the same value for pp. Therefore this is also a correct option.
+
+There exists a graph G with n nodes and a min cut (A,B) of G,
+Pr[out=(A,B)]≤pPr[out=(A,B)]≤p
+This is a tricky question and I screwed this one the first time.
+
+
+Problem 5
+The minimum s-t cut problem is the following. The input is an undirected graph, and two distinct vertices of the graph are labelled "s" and "t". The goal is to compute the minimum cut (i.e., fewest number of crossing edges) that satisfies the property that s and t are on different sides of the cut.
+
+Suppose someone gives you a subroutine for this s-t minimum cut problem via an API. Your job is to solve the original minimum cut problem (the one discussed in the lectures), when all you can do is invoke the given min s-t cut subroutine. (That is, the goal is to reduce the min cut problem to the min s-t cut problem.)
+
+Now suppose you are given an instance of the minimum cut problem -- that is, you are given an undirected graph (with no specially labelled vertices) and need to compute the minimum cut.
+
+What is the minimum number of times that you need to call the given min s-t cut subroutine to guarantee that you'll find a min cut of the given graph?
