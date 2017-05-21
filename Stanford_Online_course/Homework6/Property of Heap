@@ -1,0 +1,26 @@
+
+source: https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html
+1. A binary heap is a complete binary tree.
+
+2. heap ordering properties  (min-heap)
+ The value of each node is greater than or equal to the value of its parent
+ This guarantees that the element at the root is the minimum
+
+
+3. properties that a heap does not have:
+  1. Upper level can be larger lower level nodes (unclue larger than its nephew) 
+  2. No relationship between siblings. (left sibling can be larger/less than right sibling)
+
+
+4. Insert.
+   A new element is initially appended to the end of an array. The heap property is repaired by the means of percolation up (swapping positions 
+   with the parent if necessay)
+
+5. DeleteMin.
+   We remove the first element and replace it with the last element of the heap and then restore the heap property by percolating down.
+
+6. Heapsort: (take advantage of the partial ordering already present in the heap
+   def heapsort(heap):
+    return [heapq.heappop(heap) for _ in range(len(heap))]
+
+
