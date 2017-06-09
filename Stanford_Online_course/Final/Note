@@ -1,0 +1,27 @@
+1. Consider a directed graph G=(V,E) with non-negative edge lengths and two distinct vertices s and t of V. Let P denote a shortest path from s to t in G. If we add 10 to the length of every edge in the graph, then: [Check all that apply.]
+
+Other paths might becomes the shortest path, if it have much less number of edges compared to the previous shortest path
+
+
+
+2. DFS time complexity. adajacent matrix O(n^2). n: number of nodes
+
+
+3. What is the asymptotic running time of the Insert and Extract-Min operations, respectively, for a heap with n objects?
+
+  Extract-Min (O(log(n)). not O(1)
+Assume a min heap. When you do extract min, you remove the min element which is the root in O(1) time but someone else should replace the min element and also maintain the heap property. 
+
+
+9. Big O is upper limit:
+
+http://web.mit.edu/16.070/www/lecture/big_o.pdf
+
+11: DFS, BFS: complexity, shortest path, topological sort
+
+
+20. Recall the Master Method and its three parameters a,b,d. 
+Which of the following is the best interpretation of bd, in the context of divide-and-conquer algorithms?
+
+
+
