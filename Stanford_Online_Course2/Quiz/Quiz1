@@ -1,0 +1,53 @@
+
+
+1A
+2C
+3C
+4C
+5C
+
+Question 1:
+
+
+
+Question 2:
+
+
+Suppose we choose a with minimum finishing time. Assume this eliminates b, conflicting with a. We know fb > fa. Can fa eliminate any task which fb does not eliminate? If c is any task eliminated by a, then fc > fa, but sc < fa => c is running at time fa. But b must also be running at fa, because of the same reason => b eliminates c. Thus choosing b over a would resulting in eliminating at least as many tasks as b, and possibly more. So a is best choice out of all its conflicting tasks.
+
+###We are given as input a set of n jobs, where job j has a processing time pj and a deadline dj. Recall the definition of completion times Cj from the video lectures. Given a schedule (i.e., an ordering of the jobs), we define the lateness lj of job j as the amount of time Cj−dj after its deadline that the job completes, or as 0 if Cj≤dj. Our goal is to minimize the maximum lateness, maxjlj. Which of the following greedy rules produces an ordering that minimizes the maximum lateness? You can assume that all processing times and deadlines are distinct.
+
+Solution :
+
+Let p1 be task with minimum deadline dmin, and p2 be any other other task with deadline d2 > dmin. If we choose p1, then delay1 = max(p1 - dmin, p1 + p2 - d2). If we choose p2, then delay2 = max(p1 + p2 - dmin, p2 - d2)
+
+p1 + p2 - d2 <= p1 + p2 - dmin, because dmin < d2 p1 - dmin <= p1 + p2 - dmin p2 - d2 <= p1 + p2 - dmin, because dmin < d2, and p1 > 0
+
+Thus, delay1 <= delay 2
+
+Reasoning:
+Think about the case of two tasks:
+If two jobs have the same deadline, the delay time is the same.
+
+
+Question 3:
+
+How to determine a tree has a perfect matching?
+
+Nail this problem down by asking which edges must be included in the final solution.
+
+e.g a path graph with two edges, you delete the left edges and left and middle vertices, leaving the right vertices but no edges 
+touching this vertices.
+
+
+I think I have the solution. Since we know the graph is a tree, we know of the existance of leaf nodes, nodes with one edge and no children. In order for this node to be included in the perfect matching, that edge MUST exist in the final solution.
+
+Ergo, we can find all edges connecting to a leaf node, add to the solution, and remove the touched edges from the graph. If, at the end of this process, we are left any remaining nodes untounched, there exists no perfect matching.
+
+
+Question 4:
+
+Increase every weight by one , MST is still MSF for the new graph.
+
+But shortest path, not. Initially, the sum of a shortcut is not optimal but this shortcut may stand out if the previous 
+shortest path is composed of too many edges.
