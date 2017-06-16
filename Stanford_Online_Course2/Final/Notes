@@ -1,0 +1,13 @@
+1. By cycle property, the most expensive edge of a cycle does not belong to any MST.
+
+2. By cut property, C is correct.
+
+4: https://stackoverflow.com/questions/14297409/how-is-a-minimum-bottleneck-spanning-tree-different-from-a-minimum-spanning-tree
+
+Minimum Bottleneck spanning tree (MBST) : MBST of a given graph is a spanning tree whose maximum edge weight is minimum among all the possible spanning trees. 	
+
+The standard algorithm for finding Minimum Bottleneck Spanning Tree (MBST) is known as Camerini’s algorithm
+
+5. Our Goal: Divide the n items up into k groups so that the minimum distance between items in different groups is maximized.
+
+  
